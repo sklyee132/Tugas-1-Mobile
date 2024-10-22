@@ -1,0 +1,30 @@
+class Smartphone {
+  // 2 fields
+  String brand;
+  int storage;
+
+  // Constructor menggunakan this keyword
+  Smartphone(this.brand, this.storage);
+
+  // Method 1: method phoneDetails dengan 3 fields
+  void phoneDetails(String model, String os, double price) {
+    print('This is a $brand $model with $storage GB of storage, running on $os, priced at \$$price.');
+  }
+
+  // Method 2: method upgradeStorage dengan 3 fields
+  void upgradeStorage(int newStorage, String model, String upgradeReason) {
+    print('Upgrading $brand $model from $storage GB to $newStorage GB due to $upgradeReason.');
+    storage = newStorage;
+  }
+}
+
+void main() {
+  // Membuat instance dari class Smartphone
+  Smartphone phone = Smartphone('Samsung', 128);
+
+  // Memanggil method phoneDetails
+  phone.phoneDetails('Galaxy S21', 'Android', 799.99);
+
+  // Memanggil method upgradeStorage
+  phone.upgradeStorage(256, 'Galaxy S21', 'more space needed for apps and files');
+}
